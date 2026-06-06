@@ -9,7 +9,6 @@ const userSchema = new mongoose.Schema({
   },
   password: {
     type: String,
-    unique: [true, 'Password already exists'],
     required: [true, 'Password is required']
   },
   email: {
@@ -18,7 +17,7 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Email is required']
   }
 })
-  
+
 
 const userModel = mongoose.model('User', userSchema); 
 
