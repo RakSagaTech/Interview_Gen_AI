@@ -1,3 +1,4 @@
+import {Link} from 'react-router'
 import '../auth.form.scss'
 
  const Login = () => {
@@ -21,6 +22,7 @@ import '../auth.form.scss'
           </div>
           <button type="submit" className="button primary-button">Login</button>
         </form>
+        <p>Don't have an account? <Link to="/register">Register</Link></p>
       </div>
     </main>
   )
