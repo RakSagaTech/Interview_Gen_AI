@@ -5,7 +5,7 @@ import '../auth.form.scss'
 
  const Register = () => {
 
-  const {loading, handleRegister} = useAuth 
+  const {loading, handleRegister} = useAuth()
 
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
