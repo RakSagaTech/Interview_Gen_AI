@@ -24,7 +24,8 @@ const Interview = () => {
                         {NAV_ITEMS.map(item => (
                             <button
                                 key={item.id}
-                                className={`interview-nav__item ${activeNav === item.id ? 'interview-nav__item--active' : ''}`}                            >
+                                className={`interview-nav__item ${activeNav === item.id ? 'interview-nav__item--active' : ''}`}                           
+                                onClick={() => setActiveNav(item.id)} >
                                 <span className='interview-nav__icon'>{item.icon}</span>
                                 {item.label}
                             </button>
