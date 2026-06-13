@@ -14,7 +14,7 @@ export const useAuth = () =>{
       const data = await login({username, password})
       if (!data) {
       return
-    }
+    } 
     setUser(data.user)
     }catch(err){
       console.log(err)
@@ -55,7 +55,7 @@ export const useAuth = () =>{
     const getAndSetUser = async() =>{
       try{
         const data = await getMe()
-      setUser(data.user)
+        setUser(data.user)
       }catch(err){
         console.log(err)
       }finally{
