@@ -110,6 +110,10 @@ const interviewReportSchema = new mongoose.Schema({
   preparationPlan: {
     type: [preparationPlanSchema],
     default: []
+  },
+  user:{
+    type: mongoose.Schema.Types.ObjectId,
+    ref:"users"
   }
 },{
   timestamps: true
