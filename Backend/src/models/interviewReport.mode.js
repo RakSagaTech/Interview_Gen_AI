@@ -69,7 +69,7 @@ const preparationPlanSchema = new mongoose.Schema({
   tasks:[{
     type: String,
     required: [true, "Task is required"],
-    trime: true
+    trim: true
   }]
 },{
   _id: false
