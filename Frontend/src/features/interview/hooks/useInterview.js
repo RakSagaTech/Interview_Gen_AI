@@ -16,15 +16,14 @@ export const useInterview = () =>{
     setLoading(true)
     let response = null
     try{
-      const response = await generateInterviewReport({jobDescription, selfDescription, resumeFile})
+      response = await generateInterviewReport({jobDescription, selfDescription, resumeFile})
       setReport(response.interviewReport)
-
+      
     }catch(err){
       console.log(err)
     }finally{
       setLoading(false)
     }
-
     return response.interviewReport
   }
 
@@ -32,7 +31,7 @@ export const useInterview = () =>{
     setLoading(true)
     let response = null
       try{
-        const response = await getInterviewReportById(interviewId)
+        response = await getInterviewReportById(interviewId)
         setReport(response.interviewReport)
       }catch(err){
         console.log(err)
@@ -45,16 +44,17 @@ export const useInterview = () =>{
 
     const getReports = async() =>{
       setLoading(true)
-      let response = null 
+      let response = null
       try{
-        const response = await getAllInterviewReports()
+        response = await getAllInterviewReports()
         setReports(response.interviewReports)
       }catch(err){
         console.log(err)
       }finally{
         setLoading(false)
       }
-       return response.interviewReports
+
+      return response.interviewReports
     }
 
     return {loading, report, reports, generateReport, getReportById, getReports}
